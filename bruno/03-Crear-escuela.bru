@@ -1,0 +1,36 @@
+meta {
+  name: 03 - Crear escuela (POST)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/escuelas
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Universidad Tecnologica",
+    "ciudad": "Oaxaca"
+  }
+}
+
+script:post-response {
+  if (res.status === 201) {
+    bru.setEnvVar("escuelaId", res.body.id);
+  }
+}
+
+assert {
+  res.status: eq 201
+}

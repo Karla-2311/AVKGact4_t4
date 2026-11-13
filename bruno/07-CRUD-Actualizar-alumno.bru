@@ -1,0 +1,31 @@
+meta {
+  name: 07 - CRUD Actualizar (PUT)
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/api/alumnos/{{alumnoId}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Karla Antonio Vazquez",
+    "matricula": "A001",
+    "escuelaId": {{escuelaId}}
+  }
+}
+
+assert {
+  res.status: eq 200
+}

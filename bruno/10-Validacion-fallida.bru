@@ -1,0 +1,30 @@
+meta {
+  name: 10 - Validacion fallida (debe dar 400)
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/api/alumnos
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "",
+    "matricula": ""
+  }
+}
+
+assert {
+  res.status: eq 400
+}

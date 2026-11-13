@@ -1,0 +1,15 @@
+meta {
+  name: 09 - Endpoint protegido SIN token (debe dar 401)
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/api/alumnos
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 401
+}

@@ -1,0 +1,37 @@
+meta {
+  name: 04 - CRUD Crear alumno (POST)
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/alumnos
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "nombre": "Karla Antonio",
+    "matricula": "A001",
+    "escuelaId": {{escuelaId}}
+  }
+}
+
+script:post-response {
+  if (res.status === 201) {
+    bru.setEnvVar("alumnoId", res.body.id);
+  }
+}
+
+assert {
+  res.status: eq 201
+}
