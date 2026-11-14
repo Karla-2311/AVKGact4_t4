@@ -3,7 +3,6 @@
 API REST pura (solo JSON, sin Thymeleaf) con autenticación real mediante **Spring Security + JWT**, CRUD protegido de la entidad `Alumno` (con su relación `ManyToOne` a `Escuela`, retomada de la Actividad 3), DTOs, validación con `@Valid` y colección de pruebas en **Bruno**.
 
 - Antonio vazquez karla guadalupe
-- **API en el VPS:** 
 
 ## Tecnologías
 
@@ -88,25 +87,27 @@ mvn spring-boot:run
 ## Capturas de pantalla
 
 ### Registro
-![Registro]
+<img width="1601" height="961" alt="image" src="https://github.com/user-attachments/assets/a3cd0ae6-659c-47ff-8179-04cb8004eb8c" />
 
 ### Login
-![Login]
+<img width="1600" height="962" alt="image" src="https://github.com/user-attachments/assets/c37f9163-af32-48c9-a0f2-e0e7a98f155d" />
 
 ### Crear (POST)
-![Crear]
+<img width="1605" height="962" alt="image" src="https://github.com/user-attachments/assets/2d79a005-7eb2-47ce-b16d-4f363f216d11" />
+<img width="1600" height="965" alt="image" src="https://github.com/user-attachments/assets/f0d4645d-d395-48b1-9013-bb6b1a3a2218" />
 
 ### Listar con paginación (GET)
-![Listar]
+<img width="1598" height="962" alt="image" src="https://github.com/user-attachments/assets/90aa335a-1ddd-4943-803f-d556e2fe50e6" />
 
 ### Obtener por id (GET)
-![Obtener]
+<img width="1598" height="963" alt="image" src="https://github.com/user-attachments/assets/7e2af41f-02bf-40cb-9375-ad8f5c2f4d28" />
 
 ### Actualizar (PUT)
-![Actualizar]
+<img width="1599" height="957" alt="image" src="https://github.com/user-attachments/assets/73a9cb93-94fc-4a89-933b-e52fc0513717" />
 
 ### Eliminar (DELETE)
-![Eliminar]
+<img width="1598" height="965" alt="image" src="https://github.com/user-attachments/assets/e8217fad-b7b5-4b13-8f2b-e71bf33d31ed" />
 
 ### Endpoint protegido sin token (401)
-![Sin token]
+<img width="1599" height="962" alt="image" src="https://github.com/user-attachments/assets/d9700bbc-dbe7-42a2-a1b9-d4fc856d3676" />
+
